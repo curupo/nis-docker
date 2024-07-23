@@ -1,4 +1,4 @@
-# NEM Docker
+# NIS Docker
 
 This Docker file and the helper scripts are the fastest and easiest way deploy a [NEM](https://nemproject.github.io/nem-docs/pages/) node.
 This information is required to participate in the [Supernode Program](https://docs.nem.io/pages/Guides/supernode-program/docs.en.html).
