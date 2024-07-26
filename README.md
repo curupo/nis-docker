@@ -25,16 +25,22 @@ $ vi custom-configs/nis.config-user.properties
 $ vi custom-configs/servant.config-user.properties
 ```
 
-Depending on the way you have configured Docker, you might need to run these commands as root (or equivalently prefixed by ``sudo``):
+Build the docker container:
 
 ```bash
-$ ./boot.sh
+$ ./build.sh
 ```
 
-If you do not want to participate in the super node program, comment out the line to activate the servant:
+Start the NIS process:
 
 ```bash
-$ vi boot.sh
+$ ./nis_boot.sh
+```
+
+Starts the super node program monitoring tool:
+
+```bash
+$ ./servant_boot.sh
 ```
 
 This will start the NIS process in a Docker container named ``my_nis_container``:
@@ -46,8 +52,6 @@ To stop the container running services, simply execute:
 ```bash
 $ ./stop.sh
 ```
-
-## How to destroy
 
 To remove the container, simply execute:
 
