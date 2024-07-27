@@ -17,7 +17,7 @@ RUN cd /home/nem && curl https://bob.nem.ninja/nis-0.6.101.tgz -o nis-0.6.101.tg
 RUN cd /home/nem && tar -zxvf nis-0.6.101.tgz
 
 # Config copy
-COPY ./custom-configs/nis.config-user.properties /home/nem/package/nis
+COPY ./custom-configs/nis.config-user.properties /home/nem/package/nis.config-user.properties
 COPY ./custom-shs/nix.runNis.sh /home/nem/package
 RUN cd /home/nem && chown nem:nem -R package
 RUN cd /home/nem && chown nem:nem nis-0.6.101.tgz
