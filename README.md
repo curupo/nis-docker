@@ -31,6 +31,12 @@ Build the docker container:
 $ ./build.sh
 ```
 
+Start the docker container:
+
+```bash
+$ ./start.sh
+```
+
 Start the NIS process:
 
 ```bash
@@ -57,4 +63,13 @@ To remove the container, simply execute:
 
 ```bash
 $ ./destroy.sh
+```
+
+## How to Process monitor
+
+Register to cron:
+
+```bash
+$ crontab -e
+* * * * * /bin/sh /home/nem/nis-docker/monitor.sh
 ```
