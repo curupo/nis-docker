@@ -5,7 +5,7 @@ RUN apt install -y --no-install-recommends curl tar unzip openjdk-11-jre-headles
 RUN apt clean
 
 
-RUN useradd -d /home/nem -s /bin/sh nem
+RUN useradd -d /home/nem -s /bin/bash nem
 RUN mkdir -p /home/nem/nem
 RUN chown nem:nem -R /home/nem/nem
 
@@ -49,3 +49,4 @@ EXPOSE 7778
 EXPOSE 7890
 # Servant
 EXPOSE 7880
+
