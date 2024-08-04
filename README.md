@@ -1,15 +1,18 @@
 # NIS Docker
 
-This Docker file and the helper scripts are the fastest and easiest way deploy a [NEM](https://nemproject.github.io/nem-docs/pages/) node.
-This information is required to participate in the [Supernode Program](https://docs.nem.io/pages/Guides/supernode-program/docs.en.html).
+Customized Docker files provided by the core team.
+
+- https://github.com/NemProject/nem-docker
+- https://docs.nem.io/pages/Guides/supernode-program/docs.en.html
+
 
 ## Prerequisites
 
-- You need [Docker](https://docs.docker.com/get-docker/) installed.
+[Docker](https://docs.docker.com/get-docker/) installation is required.
 
 ## Installation
 
-Just clone [this repository](https://github.com/curupo/nis-docker) and move into it:
+Clone [this repository](https://github.com/curupo/nis-docker):
 
 ```bash
 $ git clone https://github.com/curupo/nis-docker.git
@@ -18,10 +21,15 @@ $ cd nis-docker
 
 ## How to run
 
-Set value is required:
+The required values must be set:
 
 ```text
 $ vi custom-configs/nis.config-user.properties
+```
+
+If you are participating in the Super Node Program, you will also need the following:
+
+```text
 $ vi custom-configs/servant.config-user.properties
 ```
 
@@ -37,29 +45,34 @@ Start the docker container:
 $ ./start.sh
 ```
 
+If you want to connect to a container, use the docker command:
+
+```bash
+$ docker exec -it my_nis_container bash
+# exit
+```
+
 Start the NIS process:
 
 ```bash
 $ ./nis_boot.sh
 ```
 
-Starts the super node program monitoring tool:
+Start the Super Node Program monitoring tool:
 
 ```bash
 $ ./servant_boot.sh
 ```
 
-This will start the NIS process in a Docker container named ``my_nis_container``:
-
 ## How to stop
 
-To stop the container running services, simply execute:
+Stops a running container:
 
 ```bash
 $ ./stop.sh
 ```
 
-To remove the container, simply execute:
+Rremove the container you created:
 
 ```bash
 $ ./destroy.sh
@@ -67,7 +80,7 @@ $ ./destroy.sh
 
 ## How to Process monitor
 
-Register to cron:
+Register to cron. If the process is down, start the process:
 
 ```bash
 $ crontab -e
