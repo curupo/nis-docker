@@ -3,6 +3,9 @@
 Customized Docker files provided by the core team.
 
 - https://github.com/NemProject/nem-docker
+
+To participate in the super node program, please see below.
+
 - https://docs.nem.io/pages/Guides/supernode-program/docs.en.html
 
 
