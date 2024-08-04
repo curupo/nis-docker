@@ -1,12 +1,8 @@
 # NIS Docker
 
-Customized Docker files provided by the core team.
+Customized Docker files provided by the [core team](https://github.com/NemProject/nem-docker).
 
-- https://github.com/NemProject/nem-docker
-
-To participate in the super node program, please see below.
-
-- https://docs.nem.io/pages/Guides/supernode-program/docs.en.html
+To participate in the [Supernode Program](https://docs.nem.io/pages/Guides/supernode-program/docs.en.html), please see below.
 
 
 ## Prerequisites
@@ -24,13 +20,14 @@ $ cd nis-docker
 
 ## How to run
 
-The required values must be set:
+The required values must be set. See the [documentation](https://docs.nem.io/pages/) for details.:
+
 
 ```text
 $ vi custom-configs/nis.config-user.properties
 ```
 
-If you are participating in the Super Node Program, you will also need the following:
+If you are participating in the Supernode Program, you will also need the following:
 
 ```text
 $ vi custom-configs/servant.config-user.properties
@@ -61,7 +58,7 @@ Start the NIS process:
 $ ./nis_boot.sh
 ```
 
-Start the Super Node Program monitoring tool:
+Start the Supernode Program monitoring tool:
 
 ```bash
 $ ./servant_boot.sh
