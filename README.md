@@ -20,7 +20,7 @@ $ cd nis-docker
 
 ## How to run
 
-The required values must be set. See the [documentation](https://docs.nem.io/pages/) for details.:
+The required values must be set. See the [documentation](https://docs.nem.io/pages/) for details:
 
 
 ```text
@@ -30,7 +30,7 @@ $ vi custom-configs/nis.config-user.properties
 If you are participating in the Supernode Program, you will also need the following:
 
 ```text
-$ vi custom-configs/servant.config-user.properties
+$ vi custom-configs/servant.config.properties
 ```
 
 Build the docker container:
