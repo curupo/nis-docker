@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
 RUN apt update
 RUN apt install -y --no-install-recommends curl tar unzip openjdk-11-jre-headless
