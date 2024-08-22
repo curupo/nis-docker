@@ -39,6 +39,13 @@ Build the docker container:
 $ ./build.sh
 ```
 
+Modify the destination volume for block data storage to suit your own environment </host/path>:
+```bash
+$ vim start.sh
+- --mount type=bind,source=/host/path/nis-docker/data,target=/home/nem/nem
++ --mount type=bind,source=/home/username/nis-docker/data,target=/home/nem/nem
+```
+
 Start the docker container:
 
 ```bash
