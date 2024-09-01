@@ -24,51 +24,37 @@ The required values must be set. See the [documentation](https://docs.nem.io/pag
 
 
 ```text
-$ vi custom-configs/nis.config-user.properties
+$ vi ./docker/nis/config-user.properties
 ```
 
 If you are participating in the Supernode Program, you will also need the following:
 
 ```text
-$ vi custom-configs/servant.config.properties
+$ vi ./.docker/servant/servant.config.properties
 ```
 
 Build the docker container:
 
 ```bash
-$ ./build.sh
-```
-
-Modify the destination volume for block data storage to suit your own environment </host/path>:
-```bash
-$ vim start.sh
-- --mount type=bind,source=/host/path/nis-docker/data,target=/home/nem/nem
-+ --mount type=bind,source=/home/username/nis-docker/data,target=/home/nem/nem
+$ ./nis_build.sh
 ```
 
 Start the docker container:
 
 ```bash
-$ ./start.sh
-```
-
-If you want to connect to a container, use the docker command:
-
-```bash
-$ docker exec -it my_nis_container bash
-# exit
-```
-
-Start the NIS process:
-
-```bash
-$ ./nis_boot.sh
+$ ./nis_start.sh
 ```
 
 Start the Supernode Program monitoring tool:
 
 ```bash
-$ ./servant_boot.sh
+$ ./servant_build.sh
+```
+
+Start the docker container:
+
+```bash
+$ ./servant_start.sh
 ```
 
 ## How to stop
@@ -76,20 +62,13 @@ $ ./servant_boot.sh
 Stops a running container:
 
 ```bash
-$ ./stop.sh
+$ ./nis_stop.sh
+$ ./servant_stop.sh
 ```
 
 Rremove the container you created:
 
 ```bash
-$ ./destroy.sh
-```
-
-## How to Process monitor
-
-Register to cron. If the process is down, start the process:
-
-```bash
-$ crontab -e
-* * * * * /bin/sh /home/nem/nis-docker/monitor.sh
+$ ./nis_destroy.sh
+$ ./servant_destroy.sh
 ```
