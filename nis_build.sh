@@ -6,5 +6,5 @@ docker build --rm=false -t my_nis_image .
 docker ps -a | grep my_nis_container > /dev/null && docker rm my_nis_container
 
 # Build
-docker build -t my_nis_image .
+docker build -t my_nis_image ./.docker/nis
 
